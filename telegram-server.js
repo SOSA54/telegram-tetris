@@ -7,7 +7,7 @@ const path = require('path');
 const token = '6550713692:AAFgxj5vxTE4oUYk6pkbwM1n2bSsooDwl14'; 
 
 const bot = new TelegramBot(token, { polling: true });
-const gameUrl = 'https://dc68-46-123-240-154.ngrok-free.app/telegram-tetris.html'; // Replace with your ngrok URL
+const gameUrl = 'https://telegram-tetris.vercel.app/';
 
 // Serve static files from the specified directory
 //app.use(express.static(path.join(__dirname, '/jstetris-master/jstetris-master/src')));
