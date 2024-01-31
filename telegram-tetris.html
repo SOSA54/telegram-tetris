@@ -6,6 +6,7 @@
     <title>NWC Tetris Game</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="/jstetris-master/jstetris-master/src/tetris.css" rel="stylesheet" type="text/css">
+    <link href="/casino_style.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
     <script src="/jstetris-master/jstetris-master/src/tetris.js"></script>
 </head>
@@ -26,20 +27,6 @@
                 <div><a href="javascript:void(0)" id="tetris-menu-highscores">Highscores</a></div>
                 <div><a href="javascript:void(0)" id="tetris-menu-help">About</a></div>
             </div>
-            <div class="wallet-container">
-                <div class="wallet-icon"></div>
-                <span id="walletBalance" class="wallet-balance">100 DNWC</span>
-            </div>
-            <nav class="flex gap-4">
-                <a class="text-lg hover:text-green-500" href="/homepage.html">Home</a>
-                <a class="text-lg hover:text-green-500" href="/games.html">Games</a>
-                <a class="text-lg hover:text-green-500" href="/homepage.html">Log in</a>
-                <!-- Add this inside the <header> tag -->
-    <div id="user-info" class="hidden">
-        <a href="/account.html" id="username-link" class="text-lg hover:text-green-500"></a>
-    </div>
-    
-            </nav>
         </header>
         <main class="flex-1 grid place-items-center p-6">
             <h2 class="text-3xl font-bold text-center pb-4">1v1 Tetris</h2>
@@ -139,34 +126,29 @@
                     <button class="inline-flex items-center justify-center rounded-md text-sm font-medium text-white bg-green-500 hover:bg-green-600 focus:ring focus:ring-green-400 h-10 px-4 py-2">Tutorial</button>
                 </div>
             </section>
-            <section class="mt-12 space-y-8">
-                <section class="game-areas grid grid-cols-2 gap-4">
-                    <div id="player-game" class="rounded-lg border bg-gray-800 text-white shadow-sm">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold">Player 1</h3>
-                            <p class="text-green-500">3.2 ETH</p>
-                        </div>
-                    </div>
-                    <div id="opponent-game" class="rounded-lg border bg-gray-800 text-white shadow-sm">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold">Player 2</h3>
-                            <p class="text-green-500">1.8 ETH</p>
-                        </div>
-                    </div>
-                </section>
-            </section>
         </main>
         </div>
-    
+<!-- Mobile Controls -->
+<div id="mobile-controls" class="mobile-controls">
+    <button id="button-left" class="control-button">Left</button>
+    <button id="button-right" class="control-button">Right</button>
+    <button id="button-rotate" class="control-button">Rotate</button>
+    <button id="button-down" class="control-button">Down</button>
+    <button id="button-drop" class="control-button">Drop</button>
+</div>
         <footer class="flex items-center justify-center py-4 text-gray-500">
             <p>© NWC Games. All rights reserved.</p>
         </footer>
-
+        <script src="/jstetris-master/jstetris-master/src/tetris.js"></script>
     <script>
             var tetris = new Tetris();
-            tetris.start(); // Automatically start the game
-
         document.addEventListener('DOMContentLoaded', (event) => { 
+            tetris.start(); // Automatically start the game
+            document.getElementById('button-left').addEventListener('click', function() { tetris.left(); });
+        document.getElementById('button-right').addEventListener('click', function() { tetris.right(); });
+        document.getElementById('button-rotate').addEventListener('click', function() { tetris.up(); });
+        document.getElementById('button-down').addEventListener('click', function() { tetris.down(); });
+        document.getElementById('button-drop').addEventListener('click', function() { tetris.space(); });
                 tetris.unit = 21;
                 tetris.areaX = 12;
                 tetris.areaY = 22;

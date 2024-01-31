@@ -1,0 +1,113 @@
+.dark-theme {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.navigation a {
+    color: white;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #48bb78; /* Green */
+}
+
+.main-content {
+    flex: 1;
+    padding: 16px 24px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 640px;
+    height: 420px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    height: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    padding-left: 4px;
+}
+
+
+.footer {
+    padding: 16px 24px;
+    background-color: #2d3748; /* Dark Gray */
+    color: #a0aec0; /* Light Gray */
+}
+
+.footer-navigation a {
+    color: #a0aec0; /* Light Gray */
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.footer-navigation a:hover {
+    color: #48bb78; /* Green */
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#mobile-controls {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+}
+
+#mobile-controls button {
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 16px;
+    width: 20%;
+}
