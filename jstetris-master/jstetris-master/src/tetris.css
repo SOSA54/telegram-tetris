@@ -46,11 +46,11 @@ body, table, input {
 	/* 168,308 +2px	borders	*/
 	background:	#000000;
 	position: absolute;
-	width: 256px;
+	width: 260px;
 	height:	463px;
 	left: 200px;
 	top: 0px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .grid1,	.grid2,	.grid3,	.grid4,	.grid5,	.grid6 { z-index: 10; position:	absolute; top: 0px;	width: 13px; height: 307px;	background:	#000000; }

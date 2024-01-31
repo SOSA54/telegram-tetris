@@ -128,8 +128,8 @@ function Tetris(socket)
 	this.area = null;
     this.socket = socket;
 	this.unit  = 20; // unit = x pixels
-	this.areaX = 20; // area width = x units
-	this.areaY = 20; // area height = y units
+	this.areaX = 13; // area width = x units
+	this.areaY = 23; // area height = y units
 	var socket = io.connect('http://localhost:3000');
 
 	this.highscores = new Highscores(10);
